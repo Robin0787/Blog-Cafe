@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "6425b5a58e0c1bfd10a91740",
+    "image": "./images/image-1.jpg",
+    "authorName": "Hooper Boyd",
+    "authorImage": "./images/author-1.png",
+    "date": "March 27",
+    "time": "10",
+    "topic": "How to get your first job as a self-taught programmer"
+  },
+  {
+    "_id": "6425b5a5457c3987c8699a43",
+    "image": "./images/image-2.jpg",
+    "authorName": "Bernard Bolton",
+    "authorImage": "./images/author-2.png",
+    "date": "March 25",
+    "time": "05",
+    "topic": "How to get your first job as a self-taught programmer"
+  },
+  {
+    "_id": "6425b5a5652bd193353a255b",
+    "image": "./images/image-3.jpg",
+    "authorName": "Stanton Pitts",
+    "authorImage": "./images/author-3.png",
+    "date": "March 23",
+    "time": "15",
+    "topic": "How to get your first job as a self-taught programmer"
+  },
+  {
+    "_id": "6425b5a5db0041fd4507eaa7",
+    "image": "./images/image-2.jpg",
+    "authorName": "Karyn Mccray",
+    "authorImage": "./images/author-4.png",
+    "date": "March 20",
+    "time": "10",
+    "topic": "How to get your first job as a self-taught programmer"
+  }
+]
