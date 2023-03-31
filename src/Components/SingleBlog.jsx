@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-const SingleBlog = ({blog,handleBookmark}) => {
+const SingleBlog = ({blog,handleBookmark,markAsRead}) => {
     const {_id,image, authorName, authorImage,date,time,topic} = blog;
     const [isBookmarked, setIsBookmarked] = useState(false);
 
@@ -26,7 +26,8 @@ const SingleBlog = ({blog,handleBookmark}) => {
             </div>
             <h2 className="text-3xl font-bold mb-4 leading-snug">{topic}</h2>
             <p className="text-sm text-gray-600">#beginners #programming</p>
-            <span className="inline-block text-md text-blue-700 font-semibold cursor-pointer underline mt-3">Mark as read</span>
+            <span onClick={() => {markAsRead(time)}}
+            className="inline-block text-md text-blue-700 font-semibold cursor-pointer underline mt-3">Mark as read</span>
             <hr className="my-8 text-gray-900 border-t-2 rounded-xl"/>
         </div>
     );

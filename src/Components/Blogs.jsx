@@ -7,6 +7,7 @@ import SingleBlog from './SingleBlog';
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     const [allBookmarks, setAllBookmarks] = useState([]);
+    const [readingTimes, setReadingTimes] = useState(0);
   
     useEffect(() => {
         fetch('Data.json')
@@ -22,16 +23,19 @@ const Blogs = () => {
             setAllBookmarks((prev) => [...prev, topic]);
         }
     }
+    function markAsRead (newTime) {
+        setReadingTimes((prev) => prev + parseInt(newTime));
+    }
     return (
         <>
-        <ToastContainer position="top-center" autoClose={3000} pauseOnHover={false}/>
+        <ToastContainer position="top-center" autoClose={2000} pauseOnHover={false}/>
         <section className='w-full grid md:grid-cols-main gap-4'>
             <article>
                 {
-                    blogs.map(blog => <SingleBlog key={blog._id} blog={blog} handleBookmark={handleBookmark}/>)
+                    blogs.map(blog => <SingleBlog key={blog._id} blog={blog} handleBookmark={handleBookmark} markAsRead={markAsRead}/>)
                 }
             </article>
-                <BookmarksCart allBookmarks={allBookmarks}/>
+                <BookmarksCart allBookmarks={allBookmarks} readingTimes={readingTimes}/>
         </section>
         </>
     );
