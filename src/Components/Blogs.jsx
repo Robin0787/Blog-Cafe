@@ -14,13 +14,13 @@ const Blogs = () => {
             .then((res) => res.json())
             .then((data) => setBlogs(data));
     }, []);
-    function handleBookmark (topic) {
-        const isExists = allBookmarks.find(each => each === topic);
+    function handleBookmark (blogTitle) {
+        const isExists = allBookmarks.find(each => each === blogTitle);
         if(isExists) {
             toast('Already Bookmarked');
         } 
         else {
-            setAllBookmarks((prev) => [...prev, topic]);
+            setAllBookmarks((prev) => [...prev, blogTitle]);
         }
     }
     function markAsRead (newTime) {
