@@ -3,7 +3,7 @@ import SingleBookmark from './SingleBookmark';
 
 const BookmarksCart = ({allBookmarks,readingTimes}) => {
     return (
-        <article className=''>
+        <article className='mb-6'>
             <div className='border border-blue-300 rounded-md bg-purple-50 text-blue-600 font-semibold flex justify-center items-center py-5 px-3 mb-4'>
                 <p className="text-lg">Spent time on read : {readingTimes} min</p>
             </div>

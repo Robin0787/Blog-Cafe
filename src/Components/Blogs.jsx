@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BookmarksCart from './BookmarksCart';
 import SingleBlog from './SingleBlog';
@@ -14,15 +14,17 @@ const Blogs = () => {
             .then((res) => res.json())
             .then((data) => setBlogs(data));
     }, []);
+    
     function handleBookmark (blogTitle) {
         const isExists = allBookmarks.find(each => each === blogTitle);
+        const allElements = [...allBookmarks, blogTitle];
         if(isExists) {
             toast('You have already Bookmarked this Blog');
-        } 
-        else {
-            setAllBookmarks((prev) => [...prev, blogTitle]);
         }
+        // setAllBookmarks((prev) => [...prev, blogTitle]);
+        setAllBookmarks(allElements.reverse());
     }
+
     function markAsRead (newTime) {
         setReadingTimes((prev) => prev + parseInt(newTime));
     }
