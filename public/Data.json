@@ -6,7 +6,7 @@
     "authorImage": "./images/author-1.png",
     "date": "March 27",
     "time": "10",
-    "topic": "How to get your first job as a self-taught programmer"
+    "topic": "How to become an expert in the field of Machine Learning?"
   },
   {
     "_id": "6425b5a5457c3987c8699a43",
@@ -15,7 +15,7 @@
     "authorImage": "./images/author-2.png",
     "date": "March 25",
     "time": "05",
-    "topic": "How to get your first job as a self-taught programmer"
+    "topic": "What do you need to start programming?"
   },
   {
     "_id": "6425b5a5652bd193353a255b",
@@ -24,15 +24,15 @@
     "authorImage": "./images/author-3.png",
     "date": "March 23",
     "time": "15",
-    "topic": "How to get your first job as a self-taught programmer"
+    "topic": "Is Artificial Intelligence harmful to Humans?"
   },
   {
     "_id": "6425b5a5db0041fd4507eaa7",
-    "image": "./images/image-2.jpg",
+    "image": "./images/image-4.jpg",
     "authorName": "Karyn Mccray",
     "authorImage": "./images/author-4.png",
     "date": "March 20",
     "time": "10",
-    "topic": "How to get your first job as a self-taught programmer"
+    "topic": "When should we start learning programming and how?"
   }
 ]
