@@ -7,7 +7,8 @@ module.exports = {
     "./src/Components/Blogs.jsx",
     "./src/Components/BookmarksCart.jsx",
     "./src/Components/SingleBlog.jsx",
-    "./src/Components/SingleBookmark.jsx"
+    "./src/Components/SingleBookmark.jsx",
+    "./src/Components//QuestionsAnswers.jsx",
   ],
   theme: {
     extend: {
