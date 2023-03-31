@@ -1,6 +1,9 @@
-import React from 'react';
-const SingleBlog = ({blog}) => {
+import React, { useState } from 'react';
+const SingleBlog = ({blog,handleBookmark}) => {
     const {_id,image, authorName, authorImage,date,time,topic} = blog;
+    const [isBookmarked, setIsBookmarked] = useState(false);
+
+    
     return (
         <div>
             <img src={image} className="h-full w-full rounded-xl"/>
@@ -14,7 +17,11 @@ const SingleBlog = ({blog}) => {
               </div>
               <div className='flex justify-center items-center gap-2'>
                 <p className="text-md text-gray-700">{time} minute</p>
-                <p className="text-sm"><i className="fa-regular fa-bookmark cursor-pointer"></i></p>
+                <p className="text-sm">
+                  <i onClick={() => {setIsBookmarked(true); handleBookmark(topic)}} 
+                    className={isBookmarked ? "fa-solid fa-bookmark cursor-pointer" : "fa-regular fa-bookmark cursor-pointer"}
+                    ></i>
+                </p>
               </div>
             </div>
             <h2 className="text-3xl font-bold mb-4 leading-snug">{topic}</h2>
