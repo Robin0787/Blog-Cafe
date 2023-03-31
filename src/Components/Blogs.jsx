@@ -17,7 +17,7 @@ const Blogs = () => {
     function handleBookmark (blogTitle) {
         const isExists = allBookmarks.find(each => each === blogTitle);
         if(isExists) {
-            toast('Already Bookmarked');
+            toast('You have already Bookmarked this Blog');
         } 
         else {
             setAllBookmarks((prev) => [...prev, blogTitle]);
